@@ -26,8 +26,19 @@ const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 const post = () => {
   const status = `🧘‍♀️ Մեդիտացիայի ժամ\n\n` + tips[getRandomInt(tips.length - 1)];
+  let a = status.substring(0, 490);
+  let b = status.substring(490);
+
+  if (b) {
+    a = a + "... ->";
+  }
+
   client
-    .postStatus(status)
+    .postStatus(a)
+    .then((response) => {
+      if (!b) return response;
+      return client.postStatus(b, { in_reply_to_id: response.data.id });
+    })
     .then(() => console.log("Done!"))
     .catch((error) => console.log(error));
 };
