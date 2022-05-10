@@ -25,7 +25,7 @@ const tips = [
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 const post = () => {
-  const status = `🧘‍♀️ ` + tips[getRandomInt(tips.length - 1)];
+  const status = `🧘‍♀️ Մեդիտացիայի ժամ\n\n` + tips[getRandomInt(tips.length - 1)];
   client
     .postStatus(status)
     .then(() => console.log("Done!"))
