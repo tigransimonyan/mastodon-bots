@@ -46,8 +46,8 @@ const post = (status) => {
     .catch((error) => console.log(error));
 };
 
-const time = new Date();
-const hours = birthday.getHours()
+const datetime = new Date();
+const hours = datetime.getHours()
 
 if (hours >= 22) {
   post(questions[getRandomInt(questions.length - 1)]);
