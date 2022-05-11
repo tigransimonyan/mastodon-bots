@@ -22,11 +22,13 @@ const tips = [
   "Don’t judge.\n\nIt may be tempting to judge each meditation practice as “good” or “bad” and, once you’ve been doing it for a while, to wonder if you are “improving.” Try to resist this urge to analyze your progress in terms of whether you experience lightning bolts of insights or dramatic life shifts. Instead, the next time you meditate, take a minute at the end to notice if you feel any different from when you sat down — perhaps you’re a little less tense or a little more aware of how you feel. Mediation isn’t something we ever expect to master or excel at; rather, it’s a life-long skill we are constantly working on day by day.",
 ];
 
+const questions = [
+  "@tigran ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել"
+]
+
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 
-const post = () => {
-  const status =
-    `🧘‍♀️ Մեդիտացիայի ժամ\n\n👉 ` + tips[getRandomInt(tips.length - 1)];
+const post = (status) => {
   let a = status.substring(0, 490);
   let b = status.substring(490);
 
@@ -44,4 +46,13 @@ const post = () => {
     .catch((error) => console.log(error));
 };
 
-post();
+const time = new Date();
+const hours = birthday.getHours()
+
+if (hours >= 22) {
+  post(questions[getRandomInt(questions.length - 1)]);
+}else{
+  post('@tigran մի քիչ հանգստացի, մեդիտացիայ արա\n\n👉 ' + tips[getRandomInt(tips.length - 1)]);
+}
+
+
