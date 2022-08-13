@@ -80,7 +80,7 @@ const datetime = new Date();
 const hours = datetime.getHours();
 
 if (hours >= 22) {
-  post('@tigran ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել');
+  post('Ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել\n\n@tigran');
 } else {
-  post('@tigran խորհուրդ headspace-ից`\n\n ' + tips[getRandomInt(tips.length - 1)]);
+  post('Խորհուրդ headspace-ից`\n\n ' + tips[getRandomInt(tips.length - 1)]);
 }
