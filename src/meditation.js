@@ -86,5 +86,5 @@ if (hours === 23) {
 } else if(hours === 18) {
   post('📸 կիսուիր օրուայ նկարով');
 } else {
-  post('խորհուրդ headspace-ից`\n\n ' + tips[getRandomInt(tips.length - 1)]);
+  post('💡 խորհուրդ headspace-ից`\n\n ' + tips[getRandomInt(tips.length - 1)]);
 }
