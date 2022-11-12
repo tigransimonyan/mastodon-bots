@@ -80,11 +80,11 @@ const datetime = new Date();
 const hours = datetime.getHours();
 
 if (hours === 23) {
-  post('🙌 ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել\n\n@tigran');
+  post('🙏 ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել\n\n@tigran');
 } else if(hours === 16) {
-  post('🌵 յիշիր, որ դու կակտուս չես։ ջուր խմիր\n\n@tigran');
+  post('🌵 եթե կակտուս չես ջուր խմի՜\n\n@tigran');
 } else if(hours === 18) {
   post('📸 կիսուիր օրուայ նկարով');
 } else {
-  post('💡 խորհուրդ headspace-ից`\n\n ' + tips[getRandomInt(tips.length - 1)]);
+  post('💡 խորհուրդ headspace-ից`\n\n' + tips[getRandomInt(tips.length - 1)]);
 }
