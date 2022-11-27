@@ -87,6 +87,6 @@ if (hours === 23) {
   post('եթե 🌵 չես ջուր խմի՜\n\n@tigran');
 } else if(hours === 18) {
   post('✨ վայելի՜ր ներկան');
-} else {
+} else if(hours === 14) {
   post('🦤 խորհուրդ #headspace-ից`\n\n' + tips[getRandomInt(tips.length - 1)]);
 }
