@@ -81,6 +81,8 @@ const hours = datetime.getHours();
 
 if (hours === 23) {
   post('😇 ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել\n\n@tigran');
+} else if(hours === 22) {
+  post('🦋 վայելի՜ր ներկան');
 } else if(hours === 16) {
   post('եթե 🌵 չես ջուր խմի՜\n\n@tigran');
 } else if(hours === 18) {
