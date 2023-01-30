@@ -15,13 +15,14 @@ const post = (array) => {
   return client.postStatus(status);
 };
 
-locations.forEach((location) => {
-  const path = `/${location}?lang=hy&format=%c+${location}ում %t է (զգալի՝ %f)։`;
-  axios
+const promises = locations.map((location) => {
+  const path = `/${location}?lang=hy&format=%c+${location}ում %t է (զգալի՝ %f)`;
+  return axios
     .get('https://wttr.in'.concat(encodeURI(path)))
-    .then((response) => post(response.data))
-    .then(() => console.log('Done!'))
-    .catch((error) => {
-      console.log(error);
-    });
+    .then((response) => response.data);
 });
+
+Promise.all(promises)
+  .then((array) => post(array))
+  .then(() => console.log('Done!'))
+  .catch((error) => console.log(error));
