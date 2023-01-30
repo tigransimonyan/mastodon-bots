@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^1.2.6",
     "megalodon": "^3.6.5"
   }
 }
