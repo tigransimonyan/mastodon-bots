@@ -16,7 +16,7 @@ const post = (array) => {
 };
 
 const promises = locations.map((location) => {
-  const path = `/${location}?lang=hy&format=%c+${location}ում %t է (զգալի՝ %f)`;
+  const path = `/${location}?lang=hy&format=%c+%lում %t է (զգալի՝ %f)`;
   return axios
     .get('https://wttr.in'.concat(encodeURI(path)))
     .then((response) => response.data);
