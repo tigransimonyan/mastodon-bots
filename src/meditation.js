@@ -54,6 +54,13 @@ const tips = [
   'Meditation is less about knowing what to do and more about knowing what not to do.\n\n#mindfulmoments',
   'Best advice ever received was from one of my meditation teachers at the monastery: ‘Be present, be patient, be gentle, be kind…everything else will take care of itself.’\n\n#mindfulmoments',
   'Meditation and life are not separate. Meditation simply helps us to see and understand life more clearly.\n\n#mindfulmoments',
+  'Stop choosing what isn\'t choosing you',
+  'Think of your memories as a lending library with high fines for late returns',
+  'Don\'t identify yourself with what limits you',
+  'Break patterns that no longer support you',
+  'People will love you, people will hate you, none of that will have anyting to do with you. Keep working on your energy and you will attract the right people',
+  'You can only desire based on waht you know',
+  'Whatever you are not changing you are choosing'
 ];
 
 const getRandomInt = (max) => Math.floor(Math.random() * max);
@@ -80,13 +87,13 @@ const datetime = new Date();
 const hours = datetime.getHours();
 
 if (hours === 23) {
-  post('😇 ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել\n\n@tigran');
+  post('🙏 ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել\n\n@tigran');
 } else if(hours === 22) {
   post('🦋 վայելի՜ր ներկան');
 } else if(hours === 16) {
-  post('եթե 🌵 չես ջուր խմի՜\n\n@tigran');
+  post('🌵 եթե կակտուս չես ջուր խմի՜\n\n@tigran');
 } else if(hours === 18) {
   post('✨ վայելի՜ր ներկան');
 } else if(hours === 14) {
-  post('🦤 խորհուրդ #headspace-ից`\n\n' + tips[getRandomInt(tips.length - 1)]);
+  post('📜 ' + tips[getRandomInt(tips.length - 1)]);
 }
