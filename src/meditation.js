@@ -63,6 +63,12 @@ const tips = [
   'Meditation is less about knowing what to do and more about knowing what not to do.\n\n#mindfulmoments',
   'Best advice ever received was from one of my meditation teachers at the monastery: ‘Be present, be patient, be gentle, be kind…everything else will take care of itself.’\n\n#mindfulmoments',
   'Meditation and life are not separate. Meditation simply helps us to see and understand life more clearly.\n\n#mindfulmoments',
+
+  'Հակասութիւնները ամենուր են',
+  'Մարդիկ պէտք է ցանկանան փոխուել',
+  'Զգացմունքները արժեւորւմ են փորձառութիւնը',
+  'Այն ինչը չես փոխում ընտրում ես',
+  'Դադարիր ընտրել այն ինչը քեզ չի ընտրում',
 ];
 
 const getRandomInt = (max) => Math.floor(Math.random() * max);
