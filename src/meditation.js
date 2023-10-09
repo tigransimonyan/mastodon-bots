@@ -65,7 +65,6 @@ const tips = [
   'Meditation and life are not separate. Meditation simply helps us to see and understand life more clearly.\n\n#mindfulmoments',
 
   'Հակասութիւնները ամենուր են',
-  'Մարդիկ պէտք է ցանկանան փոխուել',
   'Զգացմունքները արժեւորւմ են փորձառութիւնը',
   'Այն ինչը չես փոխում ընտրում ես',
   'Դադարիր ընտրել այն ինչը քեզ չի ընտրում',
