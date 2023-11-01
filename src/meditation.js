@@ -86,7 +86,7 @@ const post = (status) => {
 const datetime = new Date();
 const hours = datetime.getHours();
 
-const pronouns = ['սիրուն ջան', 'փիսիկ ջան', 'համով ջան', 'անքուն ջան', 'սրտիկ ջան']
+const pronouns = ['սիրուն ջան', 'համով ջան', 'դամբուլ ջան', 'սրտիկ ջան']
 
 if (hours === 23) {
   post('🙏 ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել');
@@ -99,5 +99,5 @@ if (hours === 23) {
 } else if(hours === 14) {
   post('🐙 ' + getArrayElementByDayInYear(tips));
 } else if(hours === 1) {
-  post('✨ խաղաղ գիշեր քեզ ' + pronouns[getRandomInt(pronouns.length - 1)]);
+  post('🌒 խաղաղ գիշեր քեզ ' + pronouns[getRandomInt(pronouns.length - 1)]);
 }
