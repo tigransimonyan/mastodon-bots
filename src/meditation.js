@@ -93,11 +93,11 @@ if (hours === 23) {
 } else if(hours === 22) {
   post('🌬️ խորը՜ շունչ քաշի');
 } else if(hours === 16) {
-  post('💦 քանի՞ բաժակ ջուր ես խմել այսօր');
+  post('💦 մի մոռացիր ջուր խմել');
 } else if(hours === 18) {
-  post('🦋 մի պահ կանգ առ ու վայելի՜ր ներկան');
+  post('🦋 վայելի՜ր ներկան');
 } else if(hours === 14) {
   post('🐙 ' + getArrayElementByDayInYear(tips));
 } else if(hours === 1) {
-  post('🌒 խաղաղ գիշեր քեզ ' + pronouns[getRandomInt(pronouns.length - 1)]);
+  post('🌒  խաղաղ գիշեր քեզ ' + pronouns[getRandomInt(pronouns.length - 1)]);
 }
