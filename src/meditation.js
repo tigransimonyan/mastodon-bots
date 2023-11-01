@@ -95,5 +95,5 @@ if (hours === 23) {
 } else if(hours === 18) {
   post('🦋 մի պահ կանգ առ ու վայելի՜ր ներկան');
 } else if(hours === 14) {
-  post('👵 ' + getArrayElementByDayInYear(tips));
+  post('🐙 ' + getArrayElementByDayInYear(tips));
 }
