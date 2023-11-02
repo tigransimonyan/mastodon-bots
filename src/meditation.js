@@ -1,4 +1,5 @@
 const megalodon = require('megalodon');
+const lunarphase = require('lunarphase-js');
 const generator = megalodon.default;
 
 const BASE_URL = 'https://xn--y9a6bah4ck.xn--y9a3aq';
@@ -39,7 +40,8 @@ const tips = [
   'Աշխատիր այսօր քիչ խօսել',
   'Դու ապրում ես կոտրուած սրտերի կողքին',
   'Կերակրիր դրսի կենդանիներին',
-  'Սովորիր նոր ուտեստ պատրաստել'
+  'Սովորիր նոր ուտեստ պատրաստել',
+  // 'Տխրութիւնը սխալ որոման նշան չի',
 ];
 
 const getRandomInt = (max) => Math.floor(Math.random() * max);
@@ -47,7 +49,8 @@ const getRandomInt = (max) => Math.floor(Math.random() * max);
 function getArrayElementByDayInYear(arr) {
   const currentDate = new Date();
   const startOfYear = new Date(currentDate.getFullYear(), 0, 1); // January 1st of the current year
-  const dayInYear = Math.floor((currentDate - startOfYear) / (1000 * 60 * 60 * 24)) + 1;
+  const dayInYear =
+    Math.floor((currentDate - startOfYear) / (1000 * 60 * 60 * 24)) + 1;
   let index = dayInYear - 1; // Array indices start from 0, so we subtract 1 from the dayInYear.
 
   while (index >= arr.length) {
@@ -56,7 +59,6 @@ function getArrayElementByDayInYear(arr) {
 
   return arr[index];
 }
-
 
 const postThreads = (status) => {
   let a = status.substring(0, 490);
@@ -86,18 +88,28 @@ const post = (status) => {
 const datetime = new Date();
 const hours = datetime.getHours();
 
-const pronouns = ['սիրուն ջան', 'համով ջան', 'դամբուլ ջան', 'սրտիկ ջան']
+const pronouns = [
+  'սիրուններ ջան',
+  'համովներ ջան',
+  'դամբուլներ ջան',
+  'սրտիկներ ջան',
+  'խելոքներս',
+  'անքուններ ջան',
+];
 
 if (hours === 23) {
   post('🙏 ո՞ւմ կուզենայիր շնորհակալութիւն յայտնել');
-} else if(hours === 22) {
-  post('🌬️ խորը՜ շունչ քաշի');
-} else if(hours === 16) {
+} else if (hours === 20) {
+  post('🌬️ խորը՜ շունչ քաշիր');
+} else if (hours === 16) {
   post('💦 մի մոռացիր ջուր խմել');
-} else if(hours === 18) {
+} else if (hours === 18) {
   post('🦋 վայելի՜ր ներկան');
-} else if(hours === 14) {
-  post('🐙 ' + getArrayElementByDayInYear(tips));
-} else if(hours === 1) {
-  post('🌒  խաղաղ գիշեր քեզ ' + pronouns[getRandomInt(pronouns.length - 1)]);
+} else if (hours === 14) {
+  post('🍀 ' + getArrayElementByDayInYear(tips));
+} else if (hours === 1) {
+  const luna = lunarphase.getLunarPhaseEmoji();
+  post(
+    `${luna}  խաղաղ գիշեր ձեզ ` + pronouns[getRandomInt(pronouns.length - 1)]
+  );
 }
