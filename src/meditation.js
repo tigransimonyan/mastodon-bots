@@ -42,6 +42,8 @@ const tips = [
   'Կերակրիր դրսի կենդանիներին',
   'Սովորիր նոր ուտեստ պատրաստել',
   // 'Տխրութիւնը սխալ որոման նշան չի',
+  // 'Ինչքա՞ն նշան է քեզ պէտք հասկանալու համար',
+  // 'Հեռացիր այն տեղերից, որտեղ երջանիկ չես'
 ];
 
 const getRandomInt = (max) => Math.floor(Math.random() * max);
@@ -106,7 +108,7 @@ if (hours === 23) {
 } else if (hours === 18) {
   post('🦋 վայելի՜ր ներկան');
 } else if (hours === 14) {
-  post('🍀 ' + getArrayElementByDayInYear(tips));
+  post('🧙‍♂️ ' + getArrayElementByDayInYear(tips));
 } else if (hours === 1) {
   const luna = lunarphase.Moon.lunarPhaseEmoji();
   post(
