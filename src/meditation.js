@@ -139,5 +139,5 @@ if (hours === 23) {
  ${luna}   
             խաղա՜ղ գիշեր ձեզ ${pronouns[getRandomInt(pronouns.length - 1)]}      ✨
 
-        ✨                            💫՝);
+        ✨                            💫`);
 }
