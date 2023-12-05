@@ -135,7 +135,9 @@ if (hours === 23) {
   post('🧙‍♂️ ' + getArrayElementByDayInYear(tips));
 } else if (hours === 1) {
   const luna = lunarphase.Moon.lunarPhaseEmoji();
-  post(
-    `${luna}  խաղաղ գիշեր ձեզ ` + pronouns[getRandomInt(pronouns.length - 1)]
-  );
+  post(`.                             ✨
+ ${luna}   
+            խաղա՜ղ գիշեր ձեզ ${pronouns[getRandomInt(pronouns.length - 1)]}      ✨
+
+        ✨                            💫՝);
 }
