@@ -126,7 +126,7 @@ if (hours === 23) {
 } else if (hours === 16) {
   post('💦 մի մոռացիր ջուր խմել');
 } else if (hours === 18) {
-  post(`     🦋                  🦋    
+  post(`.    🦋                  🦋    
                                               🦋
 🦋     վայելի՜ր ներկան    
                                            🦋
@@ -135,7 +135,7 @@ if (hours === 23) {
   post('🧙‍♂️ ' + getArrayElementByDayInYear(tips));
 } else if (hours === 1) {
   const luna = lunarphase.Moon.lunarPhaseEmoji();
-  post(`                              ✨
+  post(`.                             ✨
  ${luna}   
             խաղա՜ղ գիշեր ձեզ ${pronouns[getRandomInt(pronouns.length - 1)]}      ✨
 
