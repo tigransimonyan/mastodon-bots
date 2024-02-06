@@ -168,7 +168,7 @@ if (hours === 23) {
   const luna = lunarphase.Moon.lunarPhaseEmoji();
   post(`.                             ✨
  ${luna}   
-            խաղա՜ղ գիշեր ձեզ ${pronouns[getRandomInt(pronouns.length - 1)]}      ✨
+            խաղա՜ղ գիշեր քեզ      ✨
 
         ✨                            💫`);
 }
