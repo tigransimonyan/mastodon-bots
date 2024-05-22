@@ -208,11 +208,10 @@ const postThreads = (status) => {
 };
 
 const post = (status) => {
-  console.log(status);
-  // client
-  //   .postStatus(status)
-  //   .then(() => console.log('Done!'))
-  //   .catch((error) => console.log(error));
+  client
+    .postStatus(status)
+    .then(() => console.log('Done!'))
+    .catch((error) => console.log(error));
 };
 
 const datetime = new Date();
