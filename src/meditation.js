@@ -296,7 +296,7 @@ if (hours === 23) {
   text += '║\n╚═════════════';
   post(text);
 } else if (hours === 16) {
-	const test = `🚭 🫁  ${getArrayElementByDayInYear(smokingHarms)}`;
+	const text = `🚭 🫁  ${getArrayElementByDayInYear(smokingHarms)}`;
 	post(text);
 } else if (hours === 1) {
   const luna = lunarphase.Moon.lunarPhaseEmoji();
