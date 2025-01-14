@@ -240,27 +240,9 @@ function getArrayElementByDayInYear(arr) {
   return arr[index];
 }
 
-const postThreads = (status) => {
-  let a = status.substring(0, 490);
-  let b = status.substring(490);
-
-  if (b) {
-    a = a + '... ->';
-  }
-
+const post = (status, params) => {
   client
-    .postStatus(a)
-    .then((response) => {
-      if (!b) return response;
-      return client.postStatus(b, { in_reply_to_id: response.data.id });
-    })
-    .then(() => console.log('Done!'))
-    .catch((error) => console.log(error));
-};
-
-const post = (status) => {
-  client
-    .postStatus(status)
+    .postStatus(status, params)
     .then(() => console.log('Done!'))
     .catch((error) => console.log(error));
 };
@@ -298,6 +280,11 @@ if (hours === 23) {
 } else if (hours === 16) {
 	const text = `🚭☠️ Ծխելը վնասում է քո առողջութեանը\n\n${getArrayElementByDayInYear(smokingHarms)}`;
 	post(text);
+} else if (hours === 20) {
+	const text = `Ապրես որ չես ծխել։\n@CuriousHead`;
+	post(text, {
+		visibility: 'direct'
+	});
 } else if (hours === 1) {
   const luna = lunarphase.Moon.lunarPhaseEmoji();
   post(`.                             ✨
